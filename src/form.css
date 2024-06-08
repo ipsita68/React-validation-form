@@ -1,0 +1,138 @@
+/* Import Bootstrap styles */
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form Container Styling */
+.form-container {
+  display: flex; /* Center the form */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ensure the form is centered vertically */
+  padding: 20px;
+}
+
+/* Form styling */
+form {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Take full width in portrait mode */
+  max-width: 400px; /* Limit max width in landscape */
+}
+
+/* Form Elements */
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.phone-number-container {  /* or .react-tel-input */
+  margin-bottom: 20px; 
+}
+
+
+form input,
+form select {
+  width: 100%; 
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and border are included in the total width */
+}
+
+/* Password Input Group */
+.password-input {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 40%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  padding: 5px;
+}
+
+/* Media Query for Landscape Mode */
+@media (orientation: landscape) {
+  form {
+    max-width: 600px; /* Adjust for landscape mode */
+  }
+}
+
+form input[type="submit"] {
+      background-color: #6f2da8; /* Purple color from the image */
+      color: white;
+      padding: 12px 30px;  /* Adjust for a wider and taller button */
+      border: none;
+      border-radius: 8px; /* Rounded corners */
+      cursor: pointer;
+      font-weight: bold; /* Make the text bolder */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+      text-transform: uppercase; /* Make the text uppercase */
+      transition: background-color 0.3s; /* Smooth transition on hover */
+    }
+
+/* Dropdown Styling */
+.country-select {
+  appearance: none; /* Remove default appearance */
+  background-color: #fff; /* White background */
+  border: 1px solid #ccc; /* Gray border */
+  padding: 10px 20px; /* Adjust padding as needed */
+  font-size: 16px;   /* Set font size */
+  border-radius: 5px;  /* Rounded corners */
+  width: 100%; 
+  cursor: pointer;
+  outline: none; /* Remove default focus outline */
+}
+
+/* Input Field Styling */
+.PhoneInputInput { /* This class targets the input field of the PhoneInput component */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 16px;
+}
+
+/* Dropdown arrow (using pseudo-element) */
+.country-select::after {
+  content: "\25BC"; /* Downward-facing triangle */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  pointer-events: none; /* Prevent the arrow from interfering with click events */
+}
+
+/* Error Message Styling */
+form p {
+  color: red;
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.phone-input-container {
+      display: flex;
+      margin-bottom: 10px;
+    }
+    
+    .phone-input-group {
+      display: flex;
+      margin: 10px;
+    }
+    
+    .phone-input-group label {
+      margin-right: 50px;
+    }
+    

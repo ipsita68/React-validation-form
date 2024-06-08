@@ -1,0 +1,11 @@
+.success {
+      width: 100%;
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      background-color: #d4edda;
+      border-radius: 10px;
+      color: #155724;
+      margin-top: 200px;
+    }
+    
