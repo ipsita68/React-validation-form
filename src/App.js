@@ -4,7 +4,6 @@ import "./form.css";
 import { useForm } from "react-hook-form";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import Success from "./Success";
 
 const Index = () => {
   const navigate = useNavigate();
