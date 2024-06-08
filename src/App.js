@@ -261,7 +261,6 @@ const Index = () => {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit(onSubmit)}>
-        {/* ... (Your input fields) ... */}
         <label htmlFor="firstName">First Name:</label>
         <input
           type="text"
@@ -281,7 +280,7 @@ const Index = () => {
           <p className="error-message">{errors.lastName.message}</p>
         )}
 
-        <div style={{ marginBottom: "20px" }}>
+        <div>
           <label htmlFor="username">Username:</label>
           <input
             type="text"
@@ -296,9 +295,7 @@ const Index = () => {
           />
           {errors.username && <p>{errors.username.message}</p>}
         </div>
-
-        {/* Email input with added spacing */}
-        <div style={{ marginBottom: "20px" }}>
+        <div>
           <label htmlFor="email">E-mail:</label>
           <input
             type="email"
