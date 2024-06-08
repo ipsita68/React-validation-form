@@ -1,70 +1,116 @@
-# Getting Started with Create React App
+# React Validation Form
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a React-based validation form that allows users to input their personal details, such as name, username, email, password, phone number, country, and city. The form includes validation for each input field and integrates a phone number input component with country code selection. Upon successful submission, the form data is navigated to a success page.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Form Validation**: Ensures that all required fields are filled out correctly.
+- **Password Toggle**: Allows users to show/hide their password.
+- **Country and City Selection**: Dynamically updates city options based on the selected country.
+- **Phone Number Input**: Integrates with `react-phone-input-2` for international phone number input.
+- **Success Page Navigation**: Redirects to a success page with the submitted form data.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- React Router
+- React Hook Form
+- `react-phone-input-2`
+- CSS for styling
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation
 
-### `npm test`
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/react-validation-form.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd react-validation-form
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Usage
 
-### `npm run build`
+1. Start the development server:
+   ```bash
+   npm start
+   ```
+2. Open your browser and navigate to `http://localhost:3000`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Form Fields
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **First Name**: Required
+- **Last Name**: Required
+- **Username**: Required, must be at least 4 characters long
+- **Email**: Required, must be a valid email format
+- **Password**: Required, must be at least 8 characters long
+- **Phone Number**: Required, using `react-phone-input-2`
+- **Country**: Required, dynamically loads cities based on the selected country
+- **City**: Required, options are populated based on the selected country
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Project Structure
 
-### `npm run eject`
+```bash
+.
+├── public
+│   └── index.html
+├── src
+│   ├── components
+│   │   ├── Form.js
+│   │   ├── Success.js
+│   │   └── form.css
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+├── package.json
+└── README.md
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Code Explanation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Form Component (`Form.js`)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Uses `react-hook-form` for form handling and validation.
+- Includes various input fields with validation rules.
+- Integrates `react-phone-input-2` for phone number input.
+- Dynamically loads cities based on the selected country.
+- Handles form submission and navigates to the success page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Success Component (`Success.js`)
 
-## Learn More
+- Displays the submitted form data.
+- Uses React Router's `useLocation` to access the form data passed through navigation state.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### CSS (`form.css`)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Styles for the form components.
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature-branch`).
+6. Open a pull request.
 
-### Analyzing the Bundle Size
+## Screenshots of the app
+![image](https://github.com/ipsita68/React-validation-form/assets/121110612/cb63aa57-df6f-4d0a-86f7-d0ab4ae04068)
+![image](https://github.com/ipsita68/React-validation-form/assets/121110612/14476d4c-ec27-48bd-8173-9c1fceaa95b1)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## When filled with details:
+![image](https://github.com/ipsita68/React-validation-form/assets/121110612/afa9115b-73ca-43eb-9d65-320f07cd093f)
+![image](https://github.com/ipsita68/React-validation-form/assets/121110612/f6db83d3-656f-4af3-a793-f553f3a092c4)
 
-### Advanced Configuration
+## success page after submitting:
+![image](https://github.com/ipsita68/React-validation-form/assets/121110612/f571deac-b022-448a-abb8-1a9406635600)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
