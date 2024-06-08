@@ -114,6 +114,8 @@ const Index = () => {
       "Jaipur",
       "Hyderabad",
       "Surat",
+      "Ranchi",
+      "Jamshedpur"
     ],
     Indonesia: ["Jakarta", "Surabaya", "Bandung"],
     Iran: ["Tehran", "Mashhad", "Isfahan"],
